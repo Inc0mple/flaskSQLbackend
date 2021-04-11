@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Flask PostgreSQL backend project</h1>
+        <p>Insert stuff here</p>
+        <div id="container">
+            <div id="input-container">
+              <form class="form" id="postUser" action="/exercise/new-user" method="post">
+                <h3 class="input-details">Create a New User</h3>
+                <p class="input-details"><code>POST exercise/new-user</code></p>
+                <input id="uname" type="text" name="username" placeholder="username">
+                <input type="submit" value="Submit">
+              </form>
+              <form class="form" id="postExercise" action="/exercise/add" method="post">
+                <h3 class="input-details">Add exercises</h3>
+                <p class="input-details"><code>POST exercise/add</code></p>
+                <input id="uid" type="text" name="userId" placeholder="userId (required)">
+                <input id="desc" type="text" name="description" placeholder="description (required)">
+                <input id="dur" type="text" name="duration" placeholder="duration in mins. (required)">
+                <input id="dat" type="text" name="date" placeholder="date (yyyy-mm-dd) (optional)">
+                <input type="submit" value="Submit">
+              </form>
+              <form class="form" id="getExercise" action="/exercise/log" method="get">
+                <h3 class="input-details">Get Exercise Log</h3>
+                <p class="input-details"><code>GET exercise/log</code></p>
+                <input id="uid2" type="text" name="userId" placeholder="userId (required)">
+                <input id="from" type="text" name="from" placeholder="from (yyyy-mm-dd) (optional)">
+                <input id="to" type="text" name="to" placeholder="to (yyyy-mm-dd) (optional)">
+                <input id="limit" type="text" name="limit" placeholder="max logs displayed (optional)">
+                <input type="submit" value="Submit">
+              </form>
+              <div class="form">
+                <h3 class="input-details">Admin Functions:</h3>
+                <input id="getUsers" type="button" value="Get all users">
+                <input id="deleteUsers" type="button" value="Delete all users">
+              </div>
+            </div>
+            <div id="output-container">
+            <h1 id="output-title">Output</h1>
+            <div id="outputMsgBox">
+              <div id="outputMsg">Output appears here</div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>
